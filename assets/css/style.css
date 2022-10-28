@@ -1,0 +1,164 @@
+* {
+	/* border: 1px solid red; */
+}
+
+/* IMAGES */
+img {
+	height: 25px;
+	width: 50px;
+}
+
+:root {
+	/* COLORS */
+	--lochmara: rgb(4, 136, 189);
+	--granny-apple: rgb(211, 247, 232);
+	--burnt-sienna: rgb(235, 97, 62);
+}
+
+body {
+	/* background-color: var(--lochmara); */
+	font-family: 'Jost', sans-serif;
+}
+
+/* HEADER */
+header {
+	background-color: var(--lochmara);
+}
+
+h1 {
+	border-bottom: 3px solid var(--granny-apple);
+	color: var(--burnt-sienna);
+	font-size: 1.75rem;
+	font-weight: 600;
+	margin: auto;
+	padding: 0.25em;
+	text-align: center;
+}
+
+#header-nav ul {
+	color: var(--granny-apple);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+	/* margin: 0.5em; */
+	padding: 0.25em;
+}
+
+/* MAIN */
+main {
+	background-color: var(--granny-apple);
+	display: flex;
+	flex-direction: column;
+}
+
+/* MAIN BACKGROUND */
+#main-background-container {
+	background-image: url(../images/morgan-codes-wallpaper.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 8em;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+
+#main-background-container span {
+	background-color: var(--burnt-sienna);
+	bottom: 0;
+	color: var(--granny-apple);
+	font-size: 1.25em;
+	padding: 0.25em;
+	position: absolute;
+}
+
+/* ABOUT ME */
+#about-me {
+	background-color: var(--burnt-sienna);
+	border-bottom: 0.25em solid var(--lochmara);
+	margin-top: 1rem;
+}
+
+.section-heading {
+	border-bottom: 0.25em solid var(--lochmara);
+	color: var(--lochmara);
+	display: inline-block;
+	font-size: 1.5em;
+	padding: 0.25em;
+}
+
+#about-me p {
+	margin: 0.5em;
+}
+
+/* WORK */
+#work {
+	background-color: var(--burnt-sienna);
+	margin-top: 1rem;
+}
+
+#cards-container {
+	border-bottom: 0.25em solid var(--lochmara);
+	display: flex;
+	flex-flow: column;
+	gap: 1em;
+	margin-top: 0.5em;
+}
+
+.work-card {
+	background-color: var(--granny-apple);
+	position: relative;
+}
+
+.work-card:last-child {
+	margin-bottom: 0;
+}
+
+.card-name {
+	background-color: var(--granny-apple);
+	color: var(--burnt-sienna);
+	display: inline-block;
+	left: 0;
+	padding: 0.25em 1em;
+	position: absolute;
+	top: 10%;
+	z-index: 1;
+}
+
+.card-window {
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+.card-window a {
+}
+
+.card-window img {
+	height: 5%;
+	width: 100%;
+	z-index: -1000;
+}
+
+figcaption {
+	background-color: var(--granny-apple);
+	bottom: 0;
+	display: inline-block;
+	left: 0;
+	padding: 0.5em;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+/* LINKS */
+a {
+	color: var(--granny-apple);
+	text-decoration: none;
+}
+
+a:hover,
+a:visited {
+	color: var(--granny-apple);
+}
