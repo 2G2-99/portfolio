@@ -1,22 +1,15 @@
-* {
-	/* border: 1px solid red; */
-}
-
-/* IMAGES */
-img {
-	height: 25px;
-	width: 50px;
-}
+/* This is the main style, which has been made with an approach of mobile first, for other queries, check on the CSS folder. */
 
 :root {
 	/* COLORS */
 	--lochmara: rgb(4, 136, 189);
 	--granny-apple: rgb(211, 247, 232);
 	--burnt-sienna: rgb(235, 97, 62);
+
+	/* FONTS */
 }
 
 body {
-	/* background-color: var(--lochmara); */
 	font-family: 'Jost', sans-serif;
 }
 
@@ -35,10 +28,12 @@ h1 {
 	text-align: center;
 }
 
+/* NAVIGATOR */
 #header-nav ul {
 	color: var(--granny-apple);
 	display: flex;
 	flex-wrap: wrap;
+	font-weight: 200;
 	gap: 1em;
 	justify-content: center;
 	/* margin: 0.5em; */
@@ -126,6 +121,7 @@ main {
 	z-index: 1;
 }
 
+/* CARDS IMAGES */
 .card-window {
 	height: 100%;
 	position: relative;
@@ -152,13 +148,102 @@ figcaption {
 	z-index: 2;
 }
 
+/* CONTACT ME */
+#contact-me {
+	background-color: var(--lochmara);
+}
+
+#contact-me .section-heading {
+	border-bottom: 0.25em solid var(--burnt-sienna);
+	color: var(--burnt-sienna);
+}
+
+/* FORM */
+form {
+	border-bottom: 0.25em solid var(--burnt-sienna);
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+}
+
+label {
+	margin-left: 0.8em;
+}
+
+input,
+textarea {
+	background-color: var(--granny-apple);
+	border: 2px solid var(--granny-apple);
+	border-radius: 5px;
+	box-shadow: none;
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	margin: 0.25em 0.75em;
+	outline: none;
+	padding: 0.125em;
+}
+
+input:focus,
+textarea:focus {
+	border: 2px solid var(--burnt-sienna);
+}
+
+#send-btn {
+	background-color: var(--burnt-sienna);
+	border: 0.125em outset var(--granny-apple);
+	border-radius: 10px;
+	color: var(--granny-apple);
+	margin: 1.5em auto;
+	padding: 0.5em;
+	width: 8em;
+}
+
+/* BUTTON EFFECTS */
+#send-btn:hover {
+	background-color: var(--lochmara);
+	border-color: var(--burnt-sienna);
+	box-shadow: 0.5em 0.5em 10px rgb(4, 68, 95, 0.7);
+	color: var(--burnt-sienna);
+	transform: scale(1.05);
+	transition: all 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+#send-btn:active {
+	background-color: var(--burnt-sienna);
+	border-color: var(--granny-apple);
+	box-shadow: none;
+	color: var(--granny-apple);
+	transform: scale(1);
+	transition: all 0.25s;
+	transition-timing-function: ease-out;
+}
+
+/* FOOTER  */
+footer {
+	background-color: var(--lochmara);
+	color: var(--granny-apple);
+	padding: 2em;
+}
+
+#footer-content {
+	display: flex;
+}
+
+#footer-content span {
+	margin: auto;
+}
+
 /* LINKS */
 a {
 	color: var(--granny-apple);
 	text-decoration: none;
 }
 
-a:hover,
+a:hover {
+	color: var(--burnt-sienna);
+}
+
 a:visited {
 	color: var(--granny-apple);
 }
