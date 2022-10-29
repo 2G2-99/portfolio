@@ -101,15 +101,25 @@
 		</section>
 		<section id="contact-me">
 			<h2 class="section-heading">Contact Me</h2>
-			<ul>
-				<li>Number</li>
-				<li><a href="mailto:sagos0919@gmail.com">Email</a></li>
-				<li><a href="https://github.com/2G2-99">GitHub</a></li>
-			</ul>
+			<form action="" method="get">
+				<label for="name">Full Name*</label>
+				<input type="text" name="name" id="name" placeholder="Santiago Gomez" required>
+				<label for="email">Email*</label>
+				<input type="email" name="email" id="email" placeholder="santiagogomez@gmail.com"
+					required>
+				<label for="message">Message*</label>
+				<textarea name="message" id="message" cols="30" rows="5"
+					placeholder="Please, tell me your doubts"></textarea>
+				<button id="send-btn" type="submit">SEND</button>
+			</form>
 		</section>
 	</main>
 	<footer>
-		<span>Thanks for visiting! 😊</span>
+		<div id="footer-content">
+			<span>Santiago Gomez
+				<script>document.write(new Date().getFullYear())</script>
+			</span>
+		</div>
 	</footer>
 
 </body>
