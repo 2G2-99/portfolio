@@ -112,7 +112,7 @@ main {
 	display: flex;
 	flex-flow: column;
 	gap: 1em;
-	margin: 1em;
+	margin: 1em 0;
 }
 
 .work-card {
@@ -153,6 +153,7 @@ figcaption {
 	background-color: var(--granny-apple);
 	bottom: 0;
 	display: inline-block;
+	font-size: 0.8rem;
 	left: 0;
 	padding: 0.5em;
 	position: absolute;

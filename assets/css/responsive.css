@@ -38,36 +38,24 @@
 			'about-me work work'
 			'contact-me work work';
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 0.5fr 1fr 1.5fr;
+		grid-template-rows: 0.7fr 1fr 1.3fr;
 	}
 
 	#main-background {
-		grid-column-end: 4;
-		grid-column-start: 1;
-		grid-row-end: 2;
-		grid-row-start: 1;
+		grid-area: main-background;
 		height: 100%;
 	}
 
 	#about-me {
-		grid-column-end: 2;
-		grid-column-start: 1;
-		grid-row-end: 3;
-		grid-row-start: 2;
+		grid-area: about-me;
 	}
 
 	#work {
-		grid-column-end: 4;
-		grid-column-start: 2;
-		grid-row-end: 4;
-		grid-row-start: 2;
+		grid-area: work;
 	}
 
 	#contact-me {
-		grid-column-end: 2;
-		grid-column-start: 1;
-		grid-row-end: 4;
-		grid-row-start: 3;
+		grid-area: contact-me;
 	}
 
 	/* GRID-LAYOUT ON WORK */
