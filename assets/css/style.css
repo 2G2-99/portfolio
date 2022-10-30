@@ -10,7 +10,16 @@
 }
 
 body {
+	background-color: var(--granny-apple);
 	font-family: 'Jost', sans-serif;
+}
+
+.section-heading {
+	border-bottom: 0.25em solid var(--lochmara);
+	color: var(--lochmara);
+	display: inline-block;
+	font-size: 1.5em;
+	padding: 0.25em;
 }
 
 /* HEADER */
@@ -36,19 +45,31 @@ h1 {
 	font-weight: 200;
 	gap: 1em;
 	justify-content: center;
-	/* margin: 0.5em; */
-	padding: 0.25em;
+	padding: 0.5em;
+}
+
+/* LINKS ON NAV*/
+#header-nav a {
+	color: var(--granny-apple);
+	text-decoration: none;
+}
+
+#header-nav a:visited {
+	color: var(--granny-apple);
+}
+
+#header-nav a:hover {
+	color: var(--burnt-sienna);
 }
 
 /* MAIN */
 main {
-	background-color: var(--granny-apple);
 	display: flex;
 	flex-direction: column;
 }
 
 /* MAIN BACKGROUND */
-#main-background-container {
+#main-background {
 	background-image: url(../images/morgan-codes-wallpaper.png);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -59,7 +80,7 @@ main {
 	width: 100%;
 }
 
-#main-background-container span {
+#main-background span {
 	background-color: var(--burnt-sienna);
 	bottom: 0;
 	color: var(--granny-apple);
@@ -72,38 +93,33 @@ main {
 #about-me {
 	background-color: var(--burnt-sienna);
 	border-bottom: 0.25em solid var(--lochmara);
-	margin-top: 1rem;
-}
-
-.section-heading {
-	border-bottom: 0.25em solid var(--lochmara);
-	color: var(--lochmara);
-	display: inline-block;
-	font-size: 1.5em;
-	padding: 0.25em;
+	margin-top: 1em;
 }
 
 #about-me p {
 	margin: 0.5em;
+	text-align: justify;
 }
 
 /* WORK */
 #work {
 	background-color: var(--burnt-sienna);
-	margin-top: 1rem;
+	border-bottom: 0.25em solid var(--lochmara);
+	margin-top: 1em;
 }
 
 #cards-container {
-	border-bottom: 0.25em solid var(--lochmara);
 	display: flex;
 	flex-flow: column;
 	gap: 1em;
-	margin-top: 0.5em;
+	margin: 1em;
 }
 
 .work-card {
 	background-color: var(--granny-apple);
+	height: 100%;
 	position: relative;
+	width: 100%;
 }
 
 .work-card:last-child {
@@ -128,11 +144,7 @@ main {
 	width: 100%;
 }
 
-.card-window a {
-}
-
 .card-window img {
-	height: 5%;
 	width: 100%;
 	z-index: -1000;
 }
@@ -150,12 +162,9 @@ figcaption {
 
 /* CONTACT ME */
 #contact-me {
-	background-color: var(--lochmara);
-}
-
-#contact-me .section-heading {
-	border-bottom: 0.25em solid var(--burnt-sienna);
-	color: var(--burnt-sienna);
+	background-color: var(--burnt-sienna);
+	margin-top: 1em;
+	width: 100%;
 }
 
 /* FORM */
@@ -163,7 +172,7 @@ form {
 	border-bottom: 0.25em solid var(--burnt-sienna);
 	display: flex;
 	flex-direction: column;
-	margin-top: 1rem;
+	margin-top: 1em;
 }
 
 label {
@@ -189,7 +198,7 @@ textarea:focus {
 }
 
 #send-btn {
-	background-color: var(--burnt-sienna);
+	background-color: var(--lochmara);
 	border: 0.125em outset var(--granny-apple);
 	border-radius: 10px;
 	color: var(--granny-apple);
@@ -210,7 +219,7 @@ textarea:focus {
 }
 
 #send-btn:active {
-	background-color: var(--burnt-sienna);
+	background-color: var(--lochmara);
 	border-color: var(--granny-apple);
 	box-shadow: none;
 	color: var(--granny-apple);
@@ -232,18 +241,4 @@ footer {
 
 #footer-content span {
 	margin: auto;
-}
-
-/* LINKS */
-a {
-	color: var(--granny-apple);
-	text-decoration: none;
-}
-
-a:hover {
-	color: var(--burnt-sienna);
-}
-
-a:visited {
-	color: var(--granny-apple);
 }

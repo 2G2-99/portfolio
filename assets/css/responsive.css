@@ -1,0 +1,181 @@
+@media only screen and (min-width: 480px) {
+	#cards-container {
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.work-card {
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: 770px) {
+	/* LAYOUT ON HEADER */
+	header {
+		align-items: center;
+		border-bottom: 0.25em solid var(--granny-apple);
+		display: flex;
+		justify-content: space-between;
+	}
+
+	h1 {
+		border-bottom: none;
+		display: inline-block;
+		margin: 0;
+	}
+
+	#header-nav {
+		display: inline-block;
+		justify-self: flex-end;
+	}
+
+	/* GRID-LAYOUT  ON MAIN*/
+	main {
+		display: grid;
+		grid-template-areas:
+			'main-background main-background main-background'
+			'about-me work work'
+			'contact-me work work';
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr 1.5fr;
+	}
+
+	#main-background {
+		grid-column-end: 4;
+		grid-column-start: 1;
+		grid-row-end: 2;
+		grid-row-start: 1;
+		height: 100%;
+	}
+
+	#about-me {
+		grid-column-end: 2;
+		grid-column-start: 1;
+		grid-row-end: 3;
+		grid-row-start: 2;
+	}
+
+	#work {
+		grid-column-end: 4;
+		grid-column-start: 2;
+		grid-row-end: 4;
+		grid-row-start: 2;
+	}
+
+	#contact-me {
+		grid-column-end: 2;
+		grid-column-start: 1;
+		grid-row-end: 4;
+		grid-row-start: 3;
+	}
+
+	/* GRID-LAYOUT ON WORK */
+	#cards-container {
+		display: grid;
+		grid-template-areas:
+			'work-1 work-2 work-3' 'work-1 work-4 work-4'
+			'work-1 work-5 work-6';
+		grid-template-columns: 1.5fr 0.75fr 0.75fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	#work-1 {
+		grid-area: work-1;
+		width: 100%;
+	}
+
+	#work-2 {
+		grid-area: work-2;
+		width: 100%;
+	}
+
+	#work-3 {
+		grid-area: work-3;
+		width: 100%;
+	}
+
+	#work-4 {
+		grid-area: work-4;
+		width: 100%;
+	}
+
+	#work-5 {
+		grid-area: work-5;
+		width: 100%;
+	}
+
+	#work-6 {
+		grid-area: work-6;
+		width: 100%;
+	}
+	/* STYLE */
+	#main-background,
+	#about-me,
+	#work,
+	#contact-me,
+	form {
+		border-bottom: none;
+		margin-top: 0;
+	}
+
+	#about-me {
+		border-bottom: 0.25em solid var(--granny-apple);
+	}
+
+	#about-me,
+	#contact-me {
+		background-color: var(--lochmara);
+		border-right: 0.25em solid var(--granny-apple);
+	}
+
+	#about-me .section-heading,
+	#contact-me .section-heading {
+		border-bottom-color: var(--burnt-sienna);
+		color: var(--burnt-sienna);
+	}
+
+	#main-background span {
+		background-color: var(--granny-apple);
+		color: var(--lochmara);
+	}
+
+	/* FORM */
+	form {
+		margin-top: 1em;
+	}
+
+	/* BUTTON */
+	#send-btn {
+		background-color: var(--burnt-sienna);
+		color: var(--granny-apple);
+	}
+
+	#send-btn:hover {
+		background-color: var(--granny-apple);
+		border-color: var(--burnt-sienna);
+		color: var(--burnt-sienna);
+		transition: all 0.5s;
+		transition-timing-function: ease-in-out;
+	}
+
+	#send-btn:active {
+		background-color: var(--lochmara);
+		border-color: var(--burnt-sienna);
+		color: var(--burnt-sienna);
+		transition: all 0.5s;
+		transition-timing-function: ease-out;
+	}
+
+	/* FOOTER */
+	footer {
+		border-top: 0.25em solid var(--granny-apple);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+		font-size: 26px;
+		line-height: 1.2;
+	}
+}
