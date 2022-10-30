@@ -1,0 +1,11 @@
+@media screen and (min-width: 480px) {
+	#cards-container {
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.work-card {
+		width: 40%;
+	}
+}
