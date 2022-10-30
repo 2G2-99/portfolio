@@ -12,6 +12,8 @@
 body {
 	background-color: var(--granny-apple);
 	font-family: 'Jost', sans-serif;
+	height: 100vh;
+	width: 100%;
 }
 
 .section-heading {
@@ -145,7 +147,7 @@ main {
 }
 
 .card-window img {
-	width: 100%;
+	max-width: 100%;
 	z-index: -1000;
 }
 
@@ -231,13 +233,12 @@ textarea:focus {
 
 /* FOOTER  */
 footer {
+	align-items: center;
 	background-color: var(--lochmara);
 	color: var(--granny-apple);
-	padding: 2em;
-}
-
-#footer-content {
 	display: flex;
+	justify-content: center;
+	padding: 2em;
 }
 
 #footer-content span {

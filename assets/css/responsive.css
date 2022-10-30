@@ -36,9 +36,9 @@
 		grid-template-areas:
 			'main-background main-background main-background'
 			'about-me work work'
-			'contact-me work work';
+			'contact-me contact-me contact-me';
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 0.7fr 1fr 1.3fr;
+		grid-template-rows: 0.7fr 2fr 0.3fr;
 	}
 
 	#main-background {
@@ -98,6 +98,11 @@
 		width: 100%;
 	}
 	/* STYLE */
+	header,
+	footer {
+		height: 10vh;
+	}
+
 	#main-background,
 	#about-me,
 	#work,
@@ -107,30 +112,50 @@
 		margin-top: 0;
 	}
 
-	#about-me {
-		border-bottom: 0.25em solid var(--granny-apple);
+	/* MAIN BACKGROUND */
+	#main-background span {
+		background-color: var(--granny-apple);
+		color: var(--lochmara);
 	}
 
+	/* SECTIONS */
 	#about-me,
-	#contact-me {
-		background-color: var(--lochmara);
-		border-right: 0.25em solid var(--granny-apple);
+	#work {
+		/* height: 70%; */
+		width: 100%;
 	}
 
+	#contact-me {
+		/* height: 30%; */
+	}
+	/* HEADINGS */
 	#about-me .section-heading,
 	#contact-me .section-heading {
 		border-bottom-color: var(--burnt-sienna);
 		color: var(--burnt-sienna);
 	}
 
-	#main-background span {
-		background-color: var(--granny-apple);
-		color: var(--lochmara);
+	/* ABOUT ME */
+	#about-me {
+		background-color: var(--lochmara);
+		border-bottom: 0.25em solid var(--granny-apple);
+		border-right: 0.25em solid var(--granny-apple);
+	}
+
+	/* WORK */
+	#work {
+		border-bottom: 0.25em solid var(--granny-apple);
+	}
+
+	/* CONTACT ME */
+	#contact-me {
+		background-color: var(--lochmara);
 	}
 
 	/* FORM */
 	form {
-		margin-top: 1em;
+		margin: 1em auto;
+		width: 70%;
 	}
 
 	/* BUTTON */
@@ -165,5 +190,9 @@
 	body {
 		font-size: 26px;
 		line-height: 1.2;
+	}
+
+	#cards-container {
+		margin: 1em;
 	}
 }
