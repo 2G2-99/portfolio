@@ -1,23 +1,25 @@
-* {
-	/* border: 1px solid red; */
-}
-
-/* IMAGES */
-img {
-	height: 25px;
-	width: 50px;
-}
+/* This is the main style, which has been made with an approach of mobile first, for other queries, check on the CSS folder. */
 
 :root {
 	/* COLORS */
 	--lochmara: rgb(4, 136, 189);
 	--granny-apple: rgb(211, 247, 232);
 	--burnt-sienna: rgb(235, 97, 62);
+
+	/* FONTS */
 }
 
 body {
-	/* background-color: var(--lochmara); */
+	background-color: var(--granny-apple);
 	font-family: 'Jost', sans-serif;
+}
+
+.section-heading {
+	border-bottom: 0.25em solid var(--lochmara);
+	color: var(--lochmara);
+	display: inline-block;
+	font-size: 1.5em;
+	padding: 0.25em;
 }
 
 /* HEADER */
@@ -35,25 +37,39 @@ h1 {
 	text-align: center;
 }
 
+/* NAVIGATOR */
 #header-nav ul {
 	color: var(--granny-apple);
 	display: flex;
 	flex-wrap: wrap;
+	font-weight: 200;
 	gap: 1em;
 	justify-content: center;
-	/* margin: 0.5em; */
-	padding: 0.25em;
+	padding: 0.5em;
+}
+
+/* LINKS ON NAV*/
+#header-nav a {
+	color: var(--granny-apple);
+	text-decoration: none;
+}
+
+#header-nav a:visited {
+	color: var(--granny-apple);
+}
+
+#header-nav a:hover {
+	color: var(--burnt-sienna);
 }
 
 /* MAIN */
 main {
-	background-color: var(--granny-apple);
 	display: flex;
 	flex-direction: column;
 }
 
 /* MAIN BACKGROUND */
-#main-background-container {
+#main-background {
 	background-image: url(../images/morgan-codes-wallpaper.png);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -64,7 +80,7 @@ main {
 	width: 100%;
 }
 
-#main-background-container span {
+#main-background span {
 	background-color: var(--burnt-sienna);
 	bottom: 0;
 	color: var(--granny-apple);
@@ -77,38 +93,33 @@ main {
 #about-me {
 	background-color: var(--burnt-sienna);
 	border-bottom: 0.25em solid var(--lochmara);
-	margin-top: 1rem;
-}
-
-.section-heading {
-	border-bottom: 0.25em solid var(--lochmara);
-	color: var(--lochmara);
-	display: inline-block;
-	font-size: 1.5em;
-	padding: 0.25em;
+	margin-top: 1em;
 }
 
 #about-me p {
 	margin: 0.5em;
+	text-align: justify;
 }
 
 /* WORK */
 #work {
 	background-color: var(--burnt-sienna);
-	margin-top: 1rem;
+	border-bottom: 0.25em solid var(--lochmara);
+	margin-top: 1em;
 }
 
 #cards-container {
-	border-bottom: 0.25em solid var(--lochmara);
 	display: flex;
 	flex-flow: column;
 	gap: 1em;
-	margin-top: 0.5em;
+	margin: 1em;
 }
 
 .work-card {
 	background-color: var(--granny-apple);
+	height: 100%;
 	position: relative;
+	width: 100%;
 }
 
 .work-card:last-child {
@@ -126,17 +137,15 @@ main {
 	z-index: 1;
 }
 
+/* CARDS IMAGES */
 .card-window {
 	height: 100%;
 	position: relative;
 	width: 100%;
 }
 
-.card-window a {
-}
-
 .card-window img {
-	height: 5%;
+	height: 25vh;
 	width: 100%;
 	z-index: -1000;
 }
@@ -145,6 +154,7 @@ figcaption {
 	background-color: var(--granny-apple);
 	bottom: 0;
 	display: inline-block;
+	font-size: 0.8rem;
 	left: 0;
 	padding: 0.5em;
 	position: absolute;
@@ -152,13 +162,85 @@ figcaption {
 	z-index: 2;
 }
 
-/* LINKS */
-a {
-	color: var(--granny-apple);
-	text-decoration: none;
+/* CONTACT ME */
+#contact-me {
+	background-color: var(--burnt-sienna);
+	margin-top: 1em;
+	width: 100%;
 }
 
-a:hover,
-a:visited {
+/* FORM */
+form {
+	border-bottom: 0.25em solid var(--burnt-sienna);
+	display: flex;
+	flex-direction: column;
+	margin-top: 1em;
+}
+
+label {
+	margin-left: 0.8em;
+}
+
+input,
+textarea {
+	background-color: var(--granny-apple);
+	border: 2px solid var(--granny-apple);
+	border-radius: 5px;
+	box-shadow: none;
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	margin: 0.25em 0.75em;
+	outline: none;
+	padding: 0.125em;
+}
+
+input:focus,
+textarea:focus {
+	border: 2px solid var(--burnt-sienna);
+}
+
+#send-btn {
+	background-color: var(--lochmara);
+	border: 0.125em outset var(--granny-apple);
+	border-radius: 10px;
 	color: var(--granny-apple);
+	margin: 1.5em auto;
+	padding: 0.5em;
+	width: 8em;
+}
+
+/* BUTTON EFFECTS */
+#send-btn:hover {
+	background-color: var(--lochmara);
+	border-color: var(--burnt-sienna);
+	box-shadow: 0.5em 0.5em 10px rgb(4, 68, 95, 0.7);
+	color: var(--burnt-sienna);
+	transform: scale(1.05);
+	transition: all 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+#send-btn:active {
+	background-color: var(--lochmara);
+	border-color: var(--granny-apple);
+	box-shadow: none;
+	color: var(--granny-apple);
+	transform: scale(1);
+	transition: all 0.25s;
+	transition-timing-function: ease-out;
+}
+
+/* FOOTER  */
+footer {
+	background-color: var(--lochmara);
+	color: var(--granny-apple);
+	padding: 2em;
+}
+
+#footer-content {
+	display: flex;
+}
+
+#footer-content span {
+	margin: auto;
 }

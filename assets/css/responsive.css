@@ -1,0 +1,192 @@
+@media only screen and (min-width: 480px) {
+	#cards-container {
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.work-card {
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: 770px) {
+	/* LAYOUT ON HEADER */
+	header {
+		align-items: center;
+		border-bottom: 0.25em solid var(--granny-apple);
+		display: flex;
+		justify-content: space-between;
+	}
+
+	h1 {
+		border-bottom: none;
+		display: inline-block;
+		margin: 0;
+	}
+
+	#header-nav {
+		display: inline-block;
+		justify-self: flex-end;
+	}
+
+	/* GRID-LAYOUT  ON MAIN*/
+	main {
+		display: grid;
+		grid-template-areas:
+			'main-background main-background main-background'
+			'about-me work work'
+			'contact-me contact-me contact-me';
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 0.7fr 2fr 0.3fr;
+	}
+
+	#main-background {
+		grid-area: main-background;
+		height: 100%;
+	}
+
+	#about-me {
+		grid-area: about-me;
+	}
+
+	#work {
+		grid-area: work;
+	}
+
+	#contact-me {
+		grid-area: contact-me;
+	}
+
+	/* GRID-LAYOUT ON WORK */
+	#cards-container {
+		display: grid;
+		grid-template-areas:
+			'work-1 work-1 work-2'
+			'work-1 work-1 work-3'
+			'work-4 work-5 work-6';
+		grid-template-columns: 1.5fr 0.75fr 0.75fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	#work-1 {
+		grid-area: work-1;
+		width: 100%;
+	}
+
+	#work-2 {
+		grid-area: work-2;
+		width: 100%;
+	}
+
+	#work-3 {
+		grid-area: work-3;
+		width: 100%;
+	}
+
+	#work-4 {
+		grid-area: work-4;
+		width: 100%;
+	}
+
+	#work-5 {
+		grid-area: work-5;
+		width: 100%;
+	}
+
+	#work-6 {
+		grid-area: work-6;
+		width: 100%;
+	}
+	/* STYLE */
+	header,
+	footer {
+		height: 10vh;
+	}
+
+	#main-background,
+	#about-me,
+	#work,
+	#contact-me,
+	form {
+		border-bottom: none;
+		margin-top: 0;
+	}
+
+	/* MAIN BACKGROUND */
+	#main-background span {
+		background-color: var(--granny-apple);
+		color: var(--lochmara);
+	}
+
+	/* HEADINGS */
+	#about-me .section-heading,
+	#contact-me .section-heading {
+		border-bottom-color: var(--burnt-sienna);
+		color: var(--burnt-sienna);
+	}
+
+	/* ABOUT ME */
+	#about-me {
+		background-color: var(--lochmara);
+		border-bottom: 0.25em solid var(--granny-apple);
+		border-right: 0.25em solid var(--granny-apple);
+	}
+
+	/* WORK */
+	#work {
+		border-bottom: 0.25em solid var(--granny-apple);
+	}
+
+	#work-1 img {
+		display: block;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* CONTACT ME */
+	#contact-me {
+		background-color: var(--lochmara);
+	}
+
+	/* FORM */
+	form {
+		margin: 1em auto;
+		width: 70%;
+	}
+
+	/* BUTTON */
+	#send-btn {
+		background-color: var(--burnt-sienna);
+		color: var(--granny-apple);
+	}
+
+	#send-btn:hover {
+		background-color: var(--granny-apple);
+		border-color: var(--burnt-sienna);
+		color: var(--burnt-sienna);
+		transition: all 0.5s;
+		transition-timing-function: ease-in-out;
+	}
+
+	#send-btn:active {
+		background-color: var(--lochmara);
+		border-color: var(--burnt-sienna);
+		color: var(--burnt-sienna);
+		transition: all 0.5s;
+		transition-timing-function: ease-out;
+	}
+
+	/* FOOTER */
+	footer {
+		border-top: 0.25em solid var(--granny-apple);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+}
