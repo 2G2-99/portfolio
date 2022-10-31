@@ -112,7 +112,7 @@ main {
 	display: flex;
 	flex-flow: column;
 	gap: 1em;
-	margin: 1em 0;
+	margin: 1em;
 }
 
 .work-card {
