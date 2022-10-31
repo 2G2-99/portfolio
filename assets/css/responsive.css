@@ -62,8 +62,9 @@
 	#cards-container {
 		display: grid;
 		grid-template-areas:
-			'work-1 work-2 work-3' 'work-1 work-4 work-4'
-			'work-1 work-5 work-6';
+			'work-1 work-1 work-2'
+			'work-1 work-1 work-3'
+			'work-4 work-5 work-6';
 		grid-template-columns: 1.5fr 0.75fr 0.75fr;
 		grid-template-rows: 1fr 1fr 1fr;
 	}
@@ -118,16 +119,6 @@
 		color: var(--lochmara);
 	}
 
-	/* SECTIONS */
-	#about-me,
-	#work {
-		/* height: 70%; */
-		width: 100%;
-	}
-
-	#contact-me {
-		/* height: 30%; */
-	}
 	/* HEADINGS */
 	#about-me .section-heading,
 	#contact-me .section-heading {
@@ -145,6 +136,13 @@
 	/* WORK */
 	#work {
 		border-bottom: 0.25em solid var(--granny-apple);
+	}
+
+	#work-1 img {
+		display: block;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	/* CONTACT ME */
@@ -188,11 +186,7 @@
 
 @media only screen and (min-width: 1024px) {
 	body {
-		font-size: 26px;
+		font-size: 20px;
 		line-height: 1.2;
-	}
-
-	#cards-container {
-		margin: 1em;
 	}
 }

@@ -145,6 +145,7 @@ main {
 }
 
 .card-window img {
+	height: 25vh;
 	width: 100%;
 	z-index: -1000;
 }
