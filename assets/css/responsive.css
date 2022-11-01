@@ -1,16 +1,32 @@
 @media only screen and (min-width: 480px) {
+	/* ABOUT ME */
+	#profile-pic {
+		height: auto;
+		margin: 1.25em auto;
+		width: 30%;
+	}
+
+	#profile-pic img {
+		border-radius: 0.5em;
+		height: auto;
+		width: 100%;
+	}
+
+	/* WORK */
 	#cards-container {
+		display: flex;
 		flex-flow: row;
 		flex-wrap: wrap;
 		justify-content: space-around;
 	}
 
-	.work-card {
+	.card-wrapper {
+		display: block;
 		width: 40%;
 	}
 }
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 1024px) {
 	/* LAYOUT ON HEADER */
 	header {
 		align-items: center;
@@ -37,8 +53,8 @@
 			'main-background main-background main-background'
 			'about-me work work'
 			'contact-me contact-me contact-me';
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 0.7fr 2fr 0.3fr;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 0.5fr 1.5fr 1fr;
 	}
 
 	#main-background {
@@ -65,38 +81,8 @@
 			'work-1 work-1 work-2'
 			'work-1 work-1 work-3'
 			'work-4 work-5 work-6';
-		grid-template-columns: 1.5fr 0.75fr 0.75fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
-	}
-
-	#work-1 {
-		grid-area: work-1;
-		width: 100%;
-	}
-
-	#work-2 {
-		grid-area: work-2;
-		width: 100%;
-	}
-
-	#work-3 {
-		grid-area: work-3;
-		width: 100%;
-	}
-
-	#work-4 {
-		grid-area: work-4;
-		width: 100%;
-	}
-
-	#work-5 {
-		grid-area: work-5;
-		width: 100%;
-	}
-
-	#work-6 {
-		grid-area: work-6;
-		width: 100%;
 	}
 	/* STYLE */
 	header,
@@ -131,6 +117,14 @@
 		background-color: var(--lochmara);
 		border-bottom: 0.25em solid var(--granny-apple);
 		border-right: 0.25em solid var(--granny-apple);
+		position: relative;
+	}
+
+	#profile-pic {
+		/* bottom: 15%;
+		left: 15%;
+		position: absolute; */
+		width: 70%;
 	}
 
 	/* WORK */
@@ -138,11 +132,8 @@
 		border-bottom: 0.25em solid var(--granny-apple);
 	}
 
-	#work-1 img {
-		display: block;
-		height: 100%;
-		margin-left: auto;
-		margin-right: auto;
+	.card-wrapper {
+		width: 100%;
 	}
 
 	/* CONTACT ME */
@@ -184,9 +175,19 @@
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
 	body {
-		font-size: 20px;
+		font-size: 1.25rem;
 		line-height: 1.2;
+	}
+
+	main {
+		display: grid;
+		grid-template-areas:
+			'main-background main-background main-background'
+			'about-me work work'
+			'contact-me contact-me contact-me';
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 1fr 1.5fr 1fr;
 	}
 }
