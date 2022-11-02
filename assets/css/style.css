@@ -150,17 +150,24 @@ main {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	border-radius: 0.25em;
 }
 
-#work-1 {
-	background-image: url(../images/spaces-main-page.png);
-	background-position: center;
+#first {
+	background-image: url(../images/digital-marketing-meeting.jpg);
+	/* background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
+}
+
+#second {
+	background-image: url(../images/spaces-main-page.png);
 }
 
 .card-info {
 	background-color: var(--granny-apple);
+	border-bottom-left-radius: 0.25em;
+	border-bottom-right-radius: 0.25em;
 	bottom: 0;
 	display: inline-block;
 	font-size: 0.8rem;
