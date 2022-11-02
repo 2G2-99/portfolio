@@ -151,6 +151,18 @@ main {
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 0.25em;
+	box-shadow: 0.5em 0.5em 10px rgba(117, 48, 31);
+	transition: all 0.5s;
+}
+
+/* WORK CARDS ON HOVER */
+.work-card:hover {
+	box-shadow: none;
+	box-shadow: 0.5em 0.5em 10px rgba(0, 0, 0, 0.7);
+	transform: scale(1.025);
+	transition: all 0.5s;
+	transition-timing-function: ease-out;
+	z-index: 10;
 }
 
 #first {
@@ -222,6 +234,7 @@ textarea:focus {
 	color: var(--granny-apple);
 	margin: 1.5em auto;
 	padding: 0.5em;
+	transition: all 0.8s;
 	width: 8em;
 }
 
@@ -232,7 +245,7 @@ textarea:focus {
 	box-shadow: 0.5em 0.5em 10px rgb(4, 68, 95, 0.7);
 	color: var(--burnt-sienna);
 	transform: scale(1.05);
-	transition: all 0.25s;
+	transition: all 0.8s;
 	transition-timing-function: ease-in-out;
 }
 
